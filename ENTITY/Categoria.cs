@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ENTITY
+{
+    public class Categoria
+    {
+        public int IDCategoria { get; set; }
+        public string NombreCategoria { get; set; }
+        public string Descripcion { get; set; }
+
+        public override string ToString()
+        {
+            return $"ID: {IDCategoria} Nombre: {NombreCategoria} Descripcion: {Descripcion}"; 
+        }
+    }
+}
