@@ -23,6 +23,13 @@ namespace GUI
             frm.ShowDialog();
         }
 
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             FormMantProveedor frm = new FormMantProveedor();
@@ -40,10 +47,28 @@ namespace GUI
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
-
-        private void BtnCerrar_Click(object sender, EventArgs e)
+        private void InsertarFilas()
         {
-            this.Close();   
+            dataGridView1.Rows.Insert(0, "1", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(1, "2", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(2, "3", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(3, "4", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(4, "5", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(5, "6", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(6, "7", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(7, "8", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(8, "9", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(9, "10", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(10, "11", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(11, "12", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(12, "13", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(13, "14", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(14, "15", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(15, "16", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(16, "17", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(17, "18", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(18, "19", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            dataGridView1.Rows.Insert(19, "20", "Rafael", "Fernandez", "AV. Melgar", "56465");
         }
     }
 }

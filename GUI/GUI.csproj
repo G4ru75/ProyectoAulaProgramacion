@@ -71,11 +71,23 @@
     <Compile Include="FormListaProveedores.Designer.cs">
       <DependentUpon>FormListaProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMantProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMantProductos.Designer.cs">
+      <DependentUpon>FormMantProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMantProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMantProveedor.Designer.cs">
       <DependentUpon>FormMantProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVenta.Designer.cs">
+      <DependentUpon>FormVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="gui.cs">
       <SubType>Form</SubType>
@@ -111,8 +123,14 @@
     <EmbeddedResource Include="FormListaProveedores.resx">
       <DependentUpon>FormListaProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMantProductos.resx">
+      <DependentUpon>FormMantProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMantProveedor.resx">
       <DependentUpon>FormMantProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVenta.resx">
+      <DependentUpon>FormVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gui.resx">
       <DependentUpon>gui.cs</DependentUpon>

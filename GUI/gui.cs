@@ -13,6 +13,7 @@ namespace GUI
 {
     public partial class gui : Form
     {
+        private int borderSize = 2;
         public gui()
         {
             InitializeComponent();
@@ -90,6 +91,17 @@ namespace GUI
             this.PanelContenedor.Tag = fh;
             fh.Show();
         }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormVenta());
+        }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnproducto_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new Productos());
@@ -99,5 +111,28 @@ namespace GUI
         {
             AbrirFormInPanel(new FormListaProveedores());
         }
+        protected override void WndProc(ref Message msj)
+        {
+            const int CoordenadaWFP = 0x84; //ubicacion de la parte derecha inferior del form
+            const int DesIzquierda = 16;
+            const int DesDerecha = 17;
+            if (msj.Msg == CoordenadaWFP)
+            {
+                int x = (int)(msj.LParam.ToInt64() & 0xFFFF);
+                int y = (int)((msj.LParam.ToInt64() & 0xFFFF0000) >> 16);
+                Point CoordenadaArea = PointToClient(new Point(x, y));
+                Size TamañoAreaForm = ClientSize;
+                if (CoordenadaArea.X >= TamañoAreaForm.Width - 16 &&
+                    CoordenadaArea.Y >= TamañoAreaForm.Height - 16 &&
+                    TamañoAreaForm.Height >= 16)
+                {
+                    msj.Result = (IntPtr)(IsMirrored ? DesIzquierda : DesDerecha);
+                    return;
+                }
+            }
+            base.WndProc(ref msj);
+        }
+
+
     }
 }
