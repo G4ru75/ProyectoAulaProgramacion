@@ -117,26 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimizar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Captura de pantalla 2024-10-23 151231" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2024-10-23 151231.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimizar-signo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizar-signo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Captura de pantalla 2024-10-23 151210" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2024-10-23 151210.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="entrega" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\entrega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFgAAABLCAYAAAD010ABAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAAAW1JREFUeF7t17GthEAMAFHqoA3qoAC6oUB64svBSifE6eD4o7V1E4wIFhy8wGiH
+        bdt24xIYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMY
+        TmC4rsDDMOzzPJ+e3S3mTNN0etazrsDruv4Lcnwfc2Le2XnPuq+Ip8iZcaMUO/hb5Oy4UZqf3F3kCrhR
+        GuDoKnIV3CgVcPQJuRJulA44eodcDTdKCRwdkSviRmmBo4Y8jmNJ3Cg1cBS3s8DNeEu7UmrgthZen2fv
+        ZS4t8HHnHndylVICH3FbFZHTAb/DbVVDTgX8CbdVCTkN8FXcVhXkFMB3cVsVkLsDf4vbyo7cFfgpbqsh
+        L8tyet6zrsBxO3uK24o5Av9gAsMJDCcwnMBwAsMJDCcwnMBwAsMJDCcwnMBwAsMJDCcwnMBwAsMJDCcw
+        nMBwAsMJDCcwnMBwAsMJjLbtf3KWmPNV7SGSAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>
