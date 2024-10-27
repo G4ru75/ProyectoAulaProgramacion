@@ -9,14 +9,21 @@ namespace ENTITY
 {
     public class DetalleFactura
     {
-        public int IDDetalle {  get; set; }
+        public DetalleFactura() { }
+
+        public DetalleFactura(Productos productos, int cantidad, decimal preciounitario) 
+        {
+            Productos = productos;
+            Cantidad = cantidad;
+            PrecioUnitario = preciounitario; 
+        }
+        public Productos Productos { get; set; }
         public int Cantidad { get; set; }
         public decimal PrecioUnitario {  get; set; }
-        public decimal Total {  get; set; }
 
         public override string ToString()
         {
-            return $"ID: {IDDetalle} Cantidad: {Cantidad} Precio unitario: {PrecioUnitario} Total: {Total}";
+            return $"Producto: {Productos.NombreProducto} Cantidad: {Cantidad} Precio unitario: {PrecioUnitario}";
         }
     }
 }

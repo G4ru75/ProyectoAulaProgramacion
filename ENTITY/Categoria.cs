@@ -8,6 +8,15 @@ namespace ENTITY
 {
     public class Categoria
     {
+        public Categoria() { }
+
+        public Categoria(int idcategoria, string nombrecategoria, string descripcion)
+        {
+            IDCategoria = idcategoria;
+            NombreCategoria = nombrecategoria;
+            Descripcion = descripcion; 
+        }
+
         public int IDCategoria { get; set; }
         public string NombreCategoria { get; set; }
         public string Descripcion { get; set; }
