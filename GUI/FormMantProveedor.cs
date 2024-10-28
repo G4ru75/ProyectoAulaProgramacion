@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,6 +52,12 @@ namespace GUI
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
+
+            if (!Validar())
+            {
+                MessageBox.Show("Por favor revisar los datos"); 
+            }
+
             var proveedor = new Proveedor
             {
                 IDProveedor = txtIDProveedor.Text,
@@ -63,6 +70,36 @@ namespace GUI
             MessageBox.Show(mensaje);
             Limpiar(); 
 
+        }
+        private bool Validar()
+        {
+            if (!Regex.IsMatch(txtIDProveedor.Text, @"^\d{7,12}$"))
+            {
+                MessageBox.Show("El ID debe ser numérico y tener entre 7 y 12 dígitos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            var tiposID = new[] { "TI", "CC", "TE", "CE" };
+            if (!tiposID.Contains(txtTipoID.Text))
+            {
+                MessageBox.Show("El tipo de ID debe ser TI, CC, TE o CE.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("El nombre debe contener solo letras.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            {
+                MessageBox.Show("Por favor, ingresa un email válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            return true;
         }
 
         private void Limpiar()
