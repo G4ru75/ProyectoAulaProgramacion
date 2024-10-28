@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class RepositorioCatalogo
+    public abstract class RepositorioCategoria
     {
     }
 }

@@ -180,5 +180,19 @@
   <ItemGroup>
     <None Include="Resources\entrega.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{CD3AFF42-6BE9-4D67-8B8E-87B5D9EB7AE7}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY\ENTITY.csproj">
+      <Project>{76af51a1-d325-4533-bc23-9cf0eef93329}</Project>
+      <Name>ENTITY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoAula\BLL.csproj">
+      <Project>{0b16fb0b-a96c-4598-8f01-410e782d3dac}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

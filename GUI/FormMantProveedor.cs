@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ENTITY;
+using ProyectoAula;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +15,11 @@ namespace GUI
 {
     public partial class FormMantProveedor : Form
     {
+        ProveedorService Service;
         public FormMantProveedor()
         {
             InitializeComponent();
+            Service = new ProveedorService();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -43,6 +47,40 @@ namespace GUI
             this.Close();
         }
 
-       
+
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            var proveedor = new Proveedor
+            {
+                IDProveedor = txtIDProveedor.Text,
+                TipoID = txtTipoID.Text,
+                Nombre = txtNombre.Text,
+                Telefono = double.Parse(txtTelefono.Text),
+                Email = txtEmail.Text
+            }; 
+            var mensaje = Service.Guardar(proveedor);
+            MessageBox.Show(mensaje);
+            Limpiar(); 
+
+        }
+
+        private void Limpiar()
+        {
+            txtIDProveedor.Text = "";
+            txtTipoID.Text = "";
+            txtNombre.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = ""; 
+        }
+        private void FormMantProveedor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
