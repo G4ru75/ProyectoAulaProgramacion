@@ -33,7 +33,7 @@ namespace ENTITY
 
         public override string ToString()
         {         
-            return $"{TipoID},{IDProveedor},{Nombre},{Telefono},{Email} ";
+            return $"{IDProveedor},{TipoID},{Nombre},{Telefono},{Email} ";
 
         }
 

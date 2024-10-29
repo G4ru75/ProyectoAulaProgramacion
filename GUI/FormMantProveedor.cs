@@ -17,6 +17,7 @@ namespace GUI
     public partial class FormMantProveedor : Form
     {
         ProveedorService Service;
+        public event Action ProveedorModificado;
         public FormMantProveedor()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace GUI
 
         private void BtnCerrar1_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -55,25 +56,28 @@ namespace GUI
 
             if (!Validar())
             {
-                MessageBox.Show("Por favor revisar los datos"); 
+                MessageBox.Show("Por favor revisar los datos");
             }
-
-            var proveedor = new Proveedor
+            else
             {
-                IDProveedor = txtIDProveedor.Text,
-                TipoID = txtTipoID.Text,
-                Nombre = txtNombre.Text,
-                Telefono = double.Parse(txtTelefono.Text),
-                Email = txtEmail.Text
-            }; 
-            var mensaje = Service.Guardar(proveedor);
-            MessageBox.Show(mensaje);
-            Limpiar(); 
+                var proveedor = new Proveedor
+                {
+                    IDProveedor = txtIDProveedor.Text,
+                    TipoID = txtTipoID.Text,
+                    Nombre = txtNombre.Text,
+                    Telefono = double.Parse(txtTelefono.Text),
+                    Email = txtEmail.Text
+                };
+                var mensaje = Service.Guardar(proveedor);
+                MessageBox.Show(mensaje);
+                Limpiar();
+            }
 
         }
         private bool Validar()
         {
-            if (!Regex.IsMatch(txtIDProveedor.Text, @"^\d{7,12}$"))
+            txtEmail.Text = txtEmail.Text.Trim();
+            if (!Regex.IsMatch(txtIDProveedor.Text, @"^\d{7,12}$") || (txtIDProveedor.Text == ""))
             {
                 MessageBox.Show("El ID debe ser numérico y tener entre 7 y 12 dígitos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -86,13 +90,12 @@ namespace GUI
                 return false;
             }
 
-            if (!Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z\s]+$"))
+            if (!Regex.IsMatch(txtNombre.Text, @"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$") || (txtNombre.Text == ""))
             {
-                MessageBox.Show("El nombre debe contener solo letras.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                MessageBox.Show("El nombre debe contener solo letras.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error); return false;
             }
 
-            if (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            if (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$") || (txtEmail.Text == ""))
             {
                 MessageBox.Show("Por favor, ingresa un email válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -108,7 +111,7 @@ namespace GUI
             txtTipoID.Text = "";
             txtNombre.Text = "";
             txtTelefono.Text = "";
-            txtEmail.Text = ""; 
+            txtEmail.Text = "";
         }
         private void FormMantProveedor_Load(object sender, EventArgs e)
         {
@@ -116,6 +119,33 @@ namespace GUI
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (!Validar())
+            {
+                MessageBox.Show("Por favor revisar los datos");
+            }
+            else
+            {
+                var proveedor = new Proveedor
+                {
+                    IDProveedor = txtIDProveedor.Text,
+                    TipoID = txtTipoID.Text,
+                    Nombre = txtNombre.Text,
+                    Telefono = double.Parse(txtTelefono.Text),
+                    Email = txtEmail.Text
+                };
+                var mensaje = Service.Actualizar(proveedor);
+                MessageBox.Show(mensaje);
+                ProveedorModificado?.Invoke(); 
+            }
+        }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
         {
 
         }

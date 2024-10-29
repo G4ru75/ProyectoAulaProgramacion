@@ -12,15 +12,15 @@ namespace ProyectoAula
     {
         RepositorioProveedores Repositorio;
         public event Action<Proveedor> ProveedorGuardado;
-        private List<Proveedor> proveedor;
-        public  ProveedorService()
+        private List<Proveedor> proveedores;
+        public ProveedorService()
         {
             Repositorio = new RepositorioProveedores(Config.Filename_Prove);
             RefrescarLista();
         }
-        void RefrescarLista()
+        public void RefrescarLista()
         {
-            proveedor = Repositorio.GetAll();
+            proveedores = Repositorio.GetAll();
         }
         public string Guardar(Proveedor proveedor)
         {
@@ -31,13 +31,41 @@ namespace ProyectoAula
         }
         public List<Proveedor> Consultar()
         {
-            return proveedor;
+            return proveedores ?? new List<Proveedor>();
         }
 
         public Proveedor BuscarId(string id)
         {
-            var prove = proveedor.FirstOrDefault<Proveedor>(x => x.IDProveedor == id);
+            var prove = proveedores.FirstOrDefault<Proveedor>(x => x.IDProveedor == id);
             return prove;
         }
-    }
+
+        public string Actualizar(Proveedor proveedor)
+        {
+            var proveedorExistente = proveedores.FirstOrDefault<Proveedor>(x => x.IDProveedor == proveedor.IDProveedor);
+            if (proveedorExistente != null)
+            {
+                proveedorExistente.Nombre = proveedor.Nombre;
+                proveedorExistente.Telefono = proveedor.Telefono;
+                proveedorExistente.Email = proveedor.Email;
+                proveedorExistente.TipoID = proveedor.TipoID;
+                var msg = Guardar(proveedorExistente);
+                return "Provedor modificado";
+            }
+            return "Proveedor no encontrado";
+        }
+
+        public string Eliminar(string idProveedor)
+        {
+            var proveedore = proveedores.FirstOrDefault(x => x.IDProveedor == idProveedor); 
+            if (proveedore != null)
+            {
+                proveedores.Remove(proveedore);
+                 RefrescarLista();
+                return "Proveedor eliminado.";
+            } 
+
+            return "Proveedor no encontrado."; }
+
+            }
 }

@@ -14,9 +14,9 @@ namespace DAL
 
         public override List<Proveedor> GetAll()
         {
+            List<Proveedor> ListaProveedor = new List<Proveedor>();
             try
             {
-                List<Proveedor> ListaProveedor = new List<Proveedor>();
 
                 StreamReader sr = new StreamReader(_fileName);
                 while (!sr.EndOfStream)
@@ -25,6 +25,7 @@ namespace DAL
                 }
                 sr.Close();
                 return ListaProveedor;
+
             }
             catch (Exception)
             {
