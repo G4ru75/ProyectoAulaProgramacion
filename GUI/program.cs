@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace GUI
 {
     static class Program
@@ -14,7 +16,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login()); // Reemplaza `MainForm` con el nombre de tu formulario principal
+            Application.Run(new login()); // Reemplaza `MainForm` con el nombre de tu formulario principal
         }
     }
 }
