@@ -23,7 +23,7 @@ namespace ENTITY
 
         public override string ToString()
         {
-            return $",{IDCategoria},{NombreCategoria},{Descripcion}"; 
+            return $"{IDCategoria},{NombreCategoria},{Descripcion}"; 
         }
     }
 }
