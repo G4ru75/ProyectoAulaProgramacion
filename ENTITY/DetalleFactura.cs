@@ -23,7 +23,7 @@ namespace ENTITY
 
         public override string ToString()
         {
-            return $"Producto: {Productos.NombreProducto} Cantidad: {Cantidad} Precio unitario: {PrecioUnitario}";
+            return $"{Productos.NombreProducto},{Cantidad},{PrecioUnitario}";
         }
     }
 }

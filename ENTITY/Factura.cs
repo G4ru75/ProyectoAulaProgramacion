@@ -36,11 +36,8 @@ namespace ENTITY
         }
         public override string ToString()
         {
-            string detallesTexto = string.Join("\n", Detalles.Select(d => d.ToString()));
-            return $"Identificación: {IDFactura}\n" +
-                   $"Fecha de la factura: {FechaFactura}\n" +
-                   $"Total de la factura: {TotalFactura:C}\n" +
-                   $"Detalles:\n{detallesTexto}";
+            string detallesTexto = string.Join(",", Detalles.Select(d => d.ToString()));
+            return $"{IDFactura},{FechaFactura},{TotalFactura},{detallesTexto}";
         }
     }
 }
