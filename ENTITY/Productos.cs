@@ -28,8 +28,7 @@ namespace ENTITY
 
         public override string ToString()
         {
-            return $"{IDProducto},{NombreProducto},,{PrecioCompra},{Categoria.IDCategoria}";
-
+            return $"{IDProducto},{NombreProducto},{PrecioCompra},{Categoria.IDCategoria}";
         }
 
         public void ActualizarStock(int cantidad)
