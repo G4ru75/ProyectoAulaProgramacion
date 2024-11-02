@@ -16,13 +16,18 @@ namespace DAL
             _fileName = filename;
         }
         public abstract List<T> GetAll();
-        public string SaveData(T entidad)
+        public string SaveData(List<T> entidades)
         {
             try
             {
-                StreamWriter writer = new StreamWriter(_fileName, true);
-                writer.WriteLine(entidad.ToString());
-                writer.Close();
+                using (StreamWriter writer = new StreamWriter(_fileName, false))
+                { 
+                    foreach (var entidad in entidades) 
+                    { 
+                        writer.WriteLine(entidad.ToString());
+                    }
+                }
+                   
                 return "Datos Guardados correctamente";
             }
             catch (Exception ex)

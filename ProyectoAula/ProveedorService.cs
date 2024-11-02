@@ -24,7 +24,13 @@ namespace ProyectoAula
         }
         public string Guardar(Proveedor proveedor)
         {
-            var msg = Repositorio.SaveData(proveedor);
+            if (proveedores == null) 
+            { 
+                proveedores = new List<Proveedor>();
+            }
+
+            proveedores.Add(proveedor);           
+            var msg = Repositorio.SaveData(proveedores);
             RefrescarLista();
             ProveedorGuardado?.Invoke(proveedor);
             return msg;
@@ -45,12 +51,14 @@ namespace ProyectoAula
             var proveedorExistente = proveedores.FirstOrDefault<Proveedor>(x => x.IDProveedor == proveedor.IDProveedor);
             if (proveedorExistente != null)
             {
+                proveedorExistente.TipoID = proveedor.TipoID;
                 proveedorExistente.Nombre = proveedor.Nombre;
                 proveedorExistente.Telefono = proveedor.Telefono;
-                proveedorExistente.Email = proveedor.Email;
-                proveedorExistente.TipoID = proveedor.TipoID;
+                proveedorExistente.Email = proveedor.Email;                
                 var msg = Guardar(proveedorExistente);
+                RefrescarLista();
                 return "Provedor modificado";
+               
             }
             return "Proveedor no encontrado";
         }

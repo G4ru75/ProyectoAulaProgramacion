@@ -20,11 +20,12 @@ namespace GUI
         {
             InitializeComponent();
             Service = new ProveedorService();
-            Service.ProveedorGuardado += ProveedorGuardado; 
+            Service.ProveedorGuardado += ProveedorGuardado;
             CargarDatos();
         }  
         private void CargarDatos()
         {
+            dataGridView1.Rows.Clear();
             var proveedores = Service.Consultar();
             foreach (var proveedor in proveedores)
             {
