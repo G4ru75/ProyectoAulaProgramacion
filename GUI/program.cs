@@ -14,7 +14,7 @@ namespace GUI
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+           // Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new login()); // Reemplaza `MainForm` con el nombre de tu formulario principal
         }
