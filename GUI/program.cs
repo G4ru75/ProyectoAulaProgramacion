@@ -16,7 +16,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login()); // Reemplaza `MainForm` con el nombre de tu formulario principal
+            Application.Run(new login()); 
         }
     }
 }
