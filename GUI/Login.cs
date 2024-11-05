@@ -105,28 +105,48 @@ namespace GUI
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            if (txtuser.Text != "USUARIO")
-            {
-                if (txtpass.Text != "CONTRASEÑA")
-                {
-                    var validlogin = UserControl.loginuser(txtuser.Text, txtpass.Text);
-                    if (validlogin) 
-                    { gui mainMenu = new gui(); 
-                        this.Hide();
-                        mainMenu.Show(); 
 
-                }
-                    else
-                    {
-                        msgError("contraseña incorrecta /usuario incorrecto");
-                        txtuser.Focus();
-                        txtpass.Clear();
+            if (txtuser.Text == "admin" && txtpass.Text == "admin123")
+            {
+                FormWelcome welcome = new FormWelcome();
+                gui mainMenu = new gui();
+                this.Hide();              
+                welcome.ShowDialog();
+                mainMenu.Show();
+            }
+            else
+            {
+                msgError("contraseña incorrecta /usuario incorrecto");
+                txtuser.Focus();
+                txtpass.Clear();
+            }
+
+            //if (txtuser.Text != "USUARIO")
+            //{
+            //    if (txtpass.Text != "CONTRASEÑA")
+            //    {
+            //        this.Hide();
+            //        FormWelcome welcome = new FormWelcome();
+            //        var validlogin = UserControl.loginuser(txtuser.Text, txtpass.Text);
+            //        if (validlogin) 
+            //        { gui mainMenu = new gui();
+
+            //            welcome.ShowDialog();
+            //            mainMenu.Show(); 
+
+
+            //    }
+            //        else
+            //        {
+            //            msgError("contraseña incorrecta /usuario incorrecto");
+            //            txtuser.Focus();
+            //            txtpass.Clear();
                         
-                    }
-                }
-                else msgError("por favor ingrese la contraseña");
-                }
-                else msgError("Por favor ingrese su usuario");
+            //        }
+            //    }
+            //    else msgError("por favor ingrese la contraseña");
+            //    }
+            //    else msgError("Por favor ingrese su usuario");
             }
 
             private void msgError(string msg)
@@ -136,6 +156,11 @@ namespace GUI
             }
 
         private void lblErrorMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

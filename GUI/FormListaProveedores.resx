@@ -123,7 +123,7 @@
   <metadata name="TipoId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -136,7 +136,7 @@
   <data name="BtnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFgAAABLCAYAAAD010ABAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAW1JREFUeF7t17GthEAMAFHqoA3qoAC6oUB64svBSifE6eD4o7V1E4wIFhy8wGiH
+        vAAADrwBlbxySQAAAW1JREFUeF7t17GthEAMAFHqoA3qoAC6oUB64svBSifE6eD4o7V1E4wIFhy8wGiH
         bdt24xIYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMYTmA4geEEhhMY
         TmC4rsDDMOzzPJ+e3S3mTNN0etazrsDruv4Lcnwfc2Le2XnPuq+Ip8iZcaMUO/hb5Oy4UZqf3F3kCrhR
         GuDoKnIV3CgVcPQJuRJulA44eodcDTdKCRwdkSviRmmBo4Y8jmNJ3Cg1cBS3s8DNeEu7UmrgthZen2fv
@@ -145,4 +145,7 @@
         nMBwAsMJDCcwnMBwAsMJjLbtf3KWmPNV7SGSAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="proveedorServiceBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
