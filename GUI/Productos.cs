@@ -50,6 +50,16 @@ namespace GUI
             frm.textStock.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             this.Close();   
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

@@ -94,7 +94,10 @@ namespace GUI
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormVenta());
+            FormVenta frm = new FormVenta();
+            frm.FormClosed += new FormClosedEventHandler(MostrarLogoAlcerrarForm);
+            AbrirFormInPanel(frm);
+            
         }
 
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
@@ -104,12 +107,80 @@ namespace GUI
 
         private void btnproducto_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new Productos());
+
+            Productos frm = new Productos();
+            frm.FormClosed += new FormClosedEventHandler(MostrarLogoAlcerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void MostrarLogo()
+        {
+            AbrirFormInPanel(new FormLogo());
+        }
+
+        private void MostrarLogoAlcerrarForm(object sender, FormClosedEventArgs e)
+        {
+            MostrarLogo();
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void gui_Load(object sender, EventArgs e)
+        {
+            MostrarLogo();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnListaProveedores_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormListaProveedores());
+            FormListaProveedores frm = new FormListaProveedores ();
+            frm.FormClosed += new FormClosedEventHandler(MostrarLogoAlcerrarForm);
+            AbrirFormInPanel(frm);
         }
         protected override void WndProc(ref Message msj)
         {

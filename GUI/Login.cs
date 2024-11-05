@@ -109,10 +109,13 @@ namespace GUI
             {
                 if (txtpass.Text != "CONTRASEÑA")
                 {
+                    this.Hide();
+                    FormWelcome welcome = new FormWelcome();
+                    welcome.ShowDialog();
                     var validlogin = UserControl.loginuser(txtuser.Text, txtpass.Text);
                     if (validlogin) 
                     { gui mainMenu = new gui(); 
-                        this.Hide();
+                        
                         mainMenu.Show(); 
 
                 }
@@ -136,6 +139,11 @@ namespace GUI
             }
 
         private void lblErrorMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
