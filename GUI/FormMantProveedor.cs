@@ -63,7 +63,7 @@ namespace GUI
                 var proveedor = new Proveedor
                 {
                     IDProveedor = txtIDProveedor.Text,
-                    TipoID = txtTipoID.Text,
+                    TipoID = cboTipoID.SelectedText,
                     Nombre = txtNombre.Text,
                     Telefono = double.Parse(txtTelefono.Text),
                     Email = txtEmail.Text
@@ -84,7 +84,7 @@ namespace GUI
             }
 
             var tiposID = new[] { "TI", "CC", "TE", "CE" };
-            if (!tiposID.Contains(txtTipoID.Text))
+            if (!tiposID.Contains(cboTipoID.Text))
             {
                 MessageBox.Show("El tipo de ID debe ser TI, CC, TE o CE.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -108,7 +108,7 @@ namespace GUI
         private void Limpiar()
         {
             txtIDProveedor.Text = "";
-            txtTipoID.Text = "";
+            cboTipoID.Text = "";
             txtNombre.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
@@ -134,7 +134,7 @@ namespace GUI
                 var proveedor = new Proveedor
                 {
                     IDProveedor = txtIDProveedor.Text,
-                    TipoID = txtTipoID.Text,
+                    TipoID = cboTipoID.SelectedItem.ToString(),
                     Nombre = txtNombre.Text,
                     Telefono = double.Parse(txtTelefono.Text),
                     Email = txtEmail.Text
@@ -146,6 +146,56 @@ namespace GUI
         }
 
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIDProveedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTipoID_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
