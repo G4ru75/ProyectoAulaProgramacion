@@ -65,10 +65,13 @@ namespace GUI
         {
             FormMantProveedor frm = new FormMantProveedor();
             frm.txtIDProveedor.Text = TablaProveedores.CurrentRow.Cells[0].Value.ToString();
-            frm.txtTipoID.Text = TablaProveedores.CurrentRow.Cells[1].Value.ToString();
+            frm.cboTipoID.Text = TablaProveedores.CurrentRow.Cells[1].Value.ToString();
             frm.txtNombre.Text = TablaProveedores.CurrentRow.Cells[2].Value.ToString();
-            frm.txtTelefono.Text = TablaProveedores.CurrentRow.Cells[3].Value.ToString();
-            frm.txtEmail.Text = TablaProveedores.CurrentRow.Cells[4].Value.ToString();
+            frm.txtSegundoNombre.Text = TablaProveedores.CurrentRow.Cells[3].Value.ToString();
+            frm.txtApellido.Text = TablaProveedores.CurrentRow.Cells[4].Value.ToString();
+            frm.txtSegundoApellido.Text = TablaProveedores.CurrentRow.Cells[5].Value.ToString();
+            frm.txtTelefono.Text = TablaProveedores.CurrentRow.Cells[6].Value.ToString();
+            frm.txtEmail.Text = TablaProveedores.CurrentRow.Cells[7].Value.ToString();
 
             frm.ProveedorModificado += RefrescarDataGridView;
             frm.ShowDialog();
