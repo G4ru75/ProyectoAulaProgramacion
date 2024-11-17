@@ -30,20 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gui));
             this.MenuVertical = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MenuCompras = new FontAwesome.Sharp.IconMenuItem();
+            this.submenuregistrarcompra = new FontAwesome.Sharp.IconMenuItem();
+            this.submenuverdetallecompra = new FontAwesome.Sharp.IconMenuItem();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.btnListaProveedores = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnproducto = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.MenuVentas = new FontAwesome.Sharp.IconMenuItem();
+            this.submenuregistrarventa = new FontAwesome.Sharp.IconMenuItem();
+            this.submenuverdetalleventa = new FontAwesome.Sharp.IconMenuItem();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.iconrestaurar = new System.Windows.Forms.PictureBox();
             this.iconminimizar = new System.Windows.Forms.PictureBox();
@@ -51,13 +55,13 @@
             this.iconcerrar = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).BeginInit();
@@ -68,19 +72,17 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.DarkKhaki;
-            this.MenuVertical.Controls.Add(this.pictureBox3);
+            this.MenuVertical.Controls.Add(this.menuStrip1);
+            this.MenuVertical.Controls.Add(this.menuStrip2);
             this.MenuVertical.Controls.Add(this.pictureBox8);
             this.MenuVertical.Controls.Add(this.pictureBox6);
             this.MenuVertical.Controls.Add(this.pictureBox5);
-            this.MenuVertical.Controls.Add(this.pictureBox4);
             this.MenuVertical.Controls.Add(this.pictureBox2);
             this.MenuVertical.Controls.Add(this.label1);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.button6);
             this.MenuVertical.Controls.Add(this.btnListaProveedores);
             this.MenuVertical.Controls.Add(this.button3);
-            this.MenuVertical.Controls.Add(this.btnVentas);
-            this.MenuVertical.Controls.Add(this.button4);
             this.MenuVertical.Controls.Add(this.btnproducto);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
@@ -89,15 +91,58 @@
             this.MenuVertical.Size = new System.Drawing.Size(409, 800);
             this.MenuVertical.TabIndex = 0;
             // 
-            // pictureBox3
+            // menuStrip1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(68, 159);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(68, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkKhaki;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuCompras});
+            this.menuStrip1.Location = new System.Drawing.Point(19, 155);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(208, 58);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MenuCompras
+            // 
+            this.MenuCompras.AutoSize = false;
+            this.MenuCompras.BackColor = System.Drawing.Color.DarkKhaki;
+            this.MenuCompras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submenuregistrarcompra,
+            this.submenuverdetallecompra});
+            this.MenuCompras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuCompras.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
+            this.MenuCompras.IconColor = System.Drawing.Color.Black;
+            this.MenuCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuCompras.IconSize = 55;
+            this.MenuCompras.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuCompras.Name = "MenuCompras";
+            this.MenuCompras.Size = new System.Drawing.Size(200, 54);
+            this.MenuCompras.Text = "Compras";
+            this.MenuCompras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MenuCompras.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.MenuCompras.Click += new System.EventHandler(this.MenuCompras_Click);
+            // 
+            // submenuregistrarcompra
+            // 
+            this.submenuregistrarcompra.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.submenuregistrarcompra.IconColor = System.Drawing.Color.Black;
+            this.submenuregistrarcompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.submenuregistrarcompra.Name = "submenuregistrarcompra";
+            this.submenuregistrarcompra.Size = new System.Drawing.Size(224, 26);
+            this.submenuregistrarcompra.Text = "Registrar";
+            this.submenuregistrarcompra.Click += new System.EventHandler(this.submenuregistrarcompra_Click);
+            // 
+            // submenuverdetallecompra
+            // 
+            this.submenuverdetallecompra.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.submenuverdetallecompra.IconColor = System.Drawing.Color.Black;
+            this.submenuverdetallecompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.submenuverdetallecompra.Name = "submenuverdetallecompra";
+            this.submenuverdetallecompra.Size = new System.Drawing.Size(224, 26);
+            this.submenuverdetallecompra.Text = "Ver detalles";
+            this.submenuverdetallecompra.Click += new System.EventHandler(this.submenuverdetallecompra_Click);
             // 
             // pictureBox8
             // 
@@ -129,22 +174,12 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(72, 241);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(59, 49);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(70, 79);
+            this.pictureBox2.Location = new System.Drawing.Point(69, 233);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(63, 60);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -219,38 +254,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnVentas
-            // 
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.ForeColor = System.Drawing.Color.Black;
-            this.btnVentas.Location = new System.Drawing.Point(87, 167);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(203, 34);
-            this.btnVentas.TabIndex = 4;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(113, 242);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 49);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Compras";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // btnproducto
             // 
             this.btnproducto.FlatAppearance.BorderSize = 0;
@@ -258,7 +261,7 @@
             this.btnproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproducto.ForeColor = System.Drawing.Color.Black;
-            this.btnproducto.Location = new System.Drawing.Point(98, 79);
+            this.btnproducto.Location = new System.Drawing.Point(97, 243);
             this.btnproducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnproducto.Name = "btnproducto";
             this.btnproducto.Size = new System.Drawing.Size(204, 49);
@@ -266,6 +269,58 @@
             this.btnproducto.Text = "Productos";
             this.btnproducto.UseVisualStyleBackColor = true;
             this.btnproducto.Click += new System.EventHandler(this.btnproducto_Click);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.DarkKhaki;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuVentas});
+            this.menuStrip2.Location = new System.Drawing.Point(19, 76);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(358, 62);
+            this.menuStrip2.TabIndex = 16;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // MenuVentas
+            // 
+            this.MenuVentas.AutoSize = false;
+            this.MenuVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submenuregistrarventa,
+            this.submenuverdetalleventa});
+            this.MenuVentas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuVentas.ForeColor = System.Drawing.Color.Black;
+            this.MenuVentas.IconChar = FontAwesome.Sharp.IconChar.Tag;
+            this.MenuVentas.IconColor = System.Drawing.Color.Black;
+            this.MenuVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuVentas.IconSize = 55;
+            this.MenuVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuVentas.Name = "MenuVentas";
+            this.MenuVentas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MenuVentas.Size = new System.Drawing.Size(200, 58);
+            this.MenuVentas.Text = "Ventas";
+            this.MenuVentas.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            // 
+            // submenuregistrarventa
+            // 
+            this.submenuregistrarventa.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.submenuregistrarventa.IconColor = System.Drawing.Color.Black;
+            this.submenuregistrarventa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.submenuregistrarventa.Name = "submenuregistrarventa";
+            this.submenuregistrarventa.Size = new System.Drawing.Size(224, 26);
+            this.submenuregistrarventa.Text = "Registrar";
+            this.submenuregistrarventa.Click += new System.EventHandler(this.submenuregistrarventa_Click);
+            // 
+            // submenuverdetalleventa
+            // 
+            this.submenuverdetalleventa.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.submenuverdetalleventa.IconColor = System.Drawing.Color.Black;
+            this.submenuverdetalleventa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.submenuverdetalleventa.Name = "submenuverdetalleventa";
+            this.submenuverdetalleventa.Size = new System.Drawing.Size(224, 26);
+            this.submenuverdetalleventa.Text = "Ver detalles";
+            this.submenuverdetalleventa.Click += new System.EventHandler(this.submenuverdetalleventa_Click);
             // 
             // BarraTitulo
             // 
@@ -368,13 +423,15 @@
             this.Load += new System.EventHandler(this.gui_Load);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).EndInit();
@@ -394,18 +451,22 @@
         private System.Windows.Forms.PictureBox iconminimizar;
         private System.Windows.Forms.PictureBox iconrestaurar;
         private System.Windows.Forms.Button btnproducto;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnListaProveedores;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private FontAwesome.Sharp.IconMenuItem MenuVentas;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private FontAwesome.Sharp.IconMenuItem MenuCompras;
+        private FontAwesome.Sharp.IconMenuItem submenuregistrarcompra;
+        private FontAwesome.Sharp.IconMenuItem submenuverdetallecompra;
+        private FontAwesome.Sharp.IconMenuItem submenuregistrarventa;
+        private FontAwesome.Sharp.IconMenuItem submenuverdetalleventa;
     }
 }

@@ -92,13 +92,7 @@ namespace GUI
             fh.Show();
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            FormVenta frm = new FormVenta();
-            frm.FormClosed += new FormClosedEventHandler(MostrarLogoAlcerrarForm);
-            AbrirFormInPanel(frm);
-            
-        }
+       
 
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
         {
@@ -172,6 +166,40 @@ namespace GUI
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void submenuregistrarventa_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormVentas());
+        }
+
+        private void submenuverdetalleventa_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormDetalleVenta());
+        }
+
+        private void submenuregistrarcompra_Click(object sender, EventArgs e)
+        {
+            FormCompras frm = new FormCompras();
+            frm.FormClosed += new FormClosedEventHandler(MostrarLogoAlcerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        private void submenuverdetallecompra_Click(object sender, EventArgs e)
+        {
+            FormDetalleCompra frm = new FormDetalleCompra();
+            frm.FormClosed += new FormClosedEventHandler(MostrarLogoAlcerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        private void MenuCompras_Click(object sender, EventArgs e)
         {
 
         }
