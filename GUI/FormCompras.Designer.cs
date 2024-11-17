@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnbuscarproveedor = new System.Windows.Forms.GroupBox();
             this.txtidproveedor = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtdocproveedor = new System.Windows.Forms.TextBox();
             this.txtnombreproveedor = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtproducto = new System.Windows.Forms.TextBox();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.txtidproducto = new System.Windows.Forms.TextBox();
             this.txtcodproducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,10 +68,8 @@
             this.txttotalpagar = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnregistrar = new FontAwesome.Sharp.IconButton();
             this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             this.btnbuscarproveedor.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -169,6 +169,19 @@
             this.txtidproveedor.Size = new System.Drawing.Size(34, 27);
             this.txtidproveedor.TabIndex = 5;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SearchMinus;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(208, 53);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(29, 28);
+            this.iconButton1.TabIndex = 4;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(243, 54);
@@ -255,9 +268,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(721, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 20);
+            this.label10.Size = new System.Drawing.Size(75, 20);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Precio";
+            this.label10.Text = "Cantidad";
             // 
             // label9
             // 
@@ -283,6 +296,19 @@
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.Size = new System.Drawing.Size(194, 27);
             this.txtproducto.TabIndex = 8;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SearchMinus;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 20;
+            this.iconButton2.Location = new System.Drawing.Point(220, 54);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(29, 28);
+            this.iconButton2.TabIndex = 7;
+            this.iconButton2.UseVisualStyleBackColor = true;
             // 
             // txtidproducto
             // 
@@ -419,22 +445,22 @@
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // iconButton3
+            // btnregistrar
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.DarkKhaki;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.Black;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Tag;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(1025, 577);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(163, 37);
-            this.iconButton3.TabIndex = 16;
-            this.iconButton3.Text = "Registrar";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btnregistrar.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregistrar.ForeColor = System.Drawing.Color.Black;
+            this.btnregistrar.IconChar = FontAwesome.Sharp.IconChar.Tag;
+            this.btnregistrar.IconColor = System.Drawing.Color.Black;
+            this.btnregistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnregistrar.IconSize = 30;
+            this.btnregistrar.Location = new System.Drawing.Point(1025, 577);
+            this.btnregistrar.Name = "btnregistrar";
+            this.btnregistrar.Size = new System.Drawing.Size(163, 37);
+            this.btnregistrar.TabIndex = 16;
+            this.btnregistrar.Text = "Registrar";
+            this.btnregistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnregistrar.UseVisualStyleBackColor = false;
             // 
             // btnAgregarProducto
             // 
@@ -452,32 +478,6 @@
             this.btnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
             // 
-            // iconButton2
-            // 
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SearchMinus;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 20;
-            this.iconButton2.Location = new System.Drawing.Point(220, 54);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(29, 28);
-            this.iconButton2.TabIndex = 7;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SearchMinus;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(208, 53);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(29, 28);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
             // FormCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,7 +485,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1441, 728);
             this.Controls.Add(this.BtnCerrar);
-            this.Controls.Add(this.iconButton3);
+            this.Controls.Add(this.btnregistrar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txttotalpagar);
             this.Controls.Add(this.btnAgregarProducto);
@@ -552,7 +552,7 @@
         private FontAwesome.Sharp.IconButton btnAgregarProducto;
         private System.Windows.Forms.TextBox txttotalpagar;
         private System.Windows.Forms.Label label11;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnregistrar;
         private System.Windows.Forms.Button BtnCerrar;
     }
 }

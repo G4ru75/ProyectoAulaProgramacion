@@ -35,12 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtfecha = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtfeecha = new System.Windows.Forms.TextBox();
+            this.txttipodocumento = new System.Windows.Forms.TextBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtusuario = new System.Windows.Forms.TextBox();
-            this.txttipodocumento = new System.Windows.Forms.TextBox();
-            this.txtfeecha = new System.Windows.Forms.TextBox();
             this.btnbuscarproveedor = new System.Windows.Forms.GroupBox();
             this.txtnumerodocumento = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -122,6 +122,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion de compra";
             // 
+            // txtfeecha
+            // 
+            this.txtfeecha.Location = new System.Drawing.Point(10, 54);
+            this.txtfeecha.Name = "txtfeecha";
+            this.txtfeecha.Size = new System.Drawing.Size(209, 27);
+            this.txtfeecha.TabIndex = 7;
+            // 
+            // txttipodocumento
+            // 
+            this.txttipodocumento.Location = new System.Drawing.Point(225, 56);
+            this.txttipodocumento.Name = "txttipodocumento";
+            this.txttipodocumento.Size = new System.Drawing.Size(276, 27);
+            this.txttipodocumento.TabIndex = 6;
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Location = new System.Drawing.Point(507, 56);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(248, 27);
+            this.txtusuario.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(503, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Usuario";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -139,36 +169,6 @@
             this.label5.Size = new System.Drawing.Size(55, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Fecha";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(503, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Usuario";
-            // 
-            // txtusuario
-            // 
-            this.txtusuario.Location = new System.Drawing.Point(507, 56);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(248, 27);
-            this.txtusuario.TabIndex = 5;
-            // 
-            // txttipodocumento
-            // 
-            this.txttipodocumento.Location = new System.Drawing.Point(225, 56);
-            this.txttipodocumento.Name = "txttipodocumento";
-            this.txttipodocumento.Size = new System.Drawing.Size(276, 27);
-            this.txttipodocumento.TabIndex = 6;
-            // 
-            // txtfeecha
-            // 
-            this.txtfeecha.Location = new System.Drawing.Point(10, 54);
-            this.txtfeecha.Name = "txtfeecha";
-            this.txtfeecha.Size = new System.Drawing.Size(209, 27);
-            this.txtfeecha.TabIndex = 7;
             // 
             // btnbuscarproveedor
             // 

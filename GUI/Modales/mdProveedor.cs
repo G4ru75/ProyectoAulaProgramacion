@@ -20,6 +20,16 @@ namespace GUI.Modales
         private void mdProveedor_Load(object sender, EventArgs e)
         {
             
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void txttotalpagar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

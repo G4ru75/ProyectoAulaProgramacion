@@ -157,6 +157,9 @@
     <EmbeddedResource Include="FormDetalleCompra.resx">
       <DependentUpon>FormDetalleCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDetalleVenta.resx">
+      <DependentUpon>FormDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListaProveedores.resx">
       <DependentUpon>FormListaProveedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMantProveedor.resx">
       <DependentUpon>FormMantProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas.resx">
+      <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWelcome.resx">
       <DependentUpon>FormWelcome.cs</DependentUpon>
