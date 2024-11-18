@@ -40,16 +40,7 @@ namespace GUI
                 MessageBox.Show("seleccione una fila por favor");
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FormVenta frm = Owner as FormVenta;
-            frm.txttid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            frm.textDescripcion.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            frm.textCategoria.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            frm.textPrecio.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            frm.textStock.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            this.Close();   
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
