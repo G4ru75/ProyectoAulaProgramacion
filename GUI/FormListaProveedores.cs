@@ -65,7 +65,7 @@ namespace GUI
         {
             FormMantProveedor frm = new FormMantProveedor();
             frm.txtIDProveedor.Text = TablaProveedores.CurrentRow.Cells[0].Value.ToString();
-            //frm.cboTipoID.text= TablaProveedores.CurrentRow.Cells[1].Value.ToString();
+            frm.cboTipoID.Text = TablaProveedores.CurrentRow.Cells[1].Value.ToString();
             frm.txtNombre.Text = TablaProveedores.CurrentRow.Cells[2].Value.ToString();
             frm.txtSegundoNombre.Text = TablaProveedores.CurrentRow.Cells[3].Value.ToString();
             frm.txtApellido.Text = TablaProveedores.CurrentRow.Cells[4].Value.ToString();

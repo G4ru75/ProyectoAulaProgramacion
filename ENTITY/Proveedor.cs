@@ -10,48 +10,30 @@ namespace ENTITY
     public class Proveedor
     {
         public Proveedor()
-        {
-            Producto = new List<Productos>(); 
+        { 
         }
 
-        public Proveedor(string iDProveedor, string tipoID, string nombre, double telefono, string email, List<Productos> producto)
+        public Proveedor(string iDProveedor, TipoID tipoid, string nombre, string segundonombre, string apellido, string segundoapellido, double telefono, string email)
         {
             IDProveedor = iDProveedor;
-            TipoID = tipoID;
+            TipoID = tipoid;
             Nombre = nombre;
+            SegundoNombre = segundonombre;
+            Apellido = apellido;
+            SegundoApellido = segundoapellido;
             Telefono = telefono;
-            Email = email;
-            Producto = producto ?? new List<Productos>(); 
+            Email = email;          
         }
 
         public string IDProveedor { get; set; }
-        public string TipoID { get; set; }
+        public TipoID TipoID { get; set; }
         public string Nombre { get; set; }
+        public string SegundoNombre { get; set; }
+        public string Apellido { get; set; }
+        public string SegundoApellido { get; set; }
         public double Telefono { get; set; }
         public string Email { get; set; }
-        public List<Productos> Producto { get; set; }
 
-        public override string ToString()
-        {         
-            return $"{IDProveedor},{TipoID},{Nombre},{Telefono},{Email} ";
-
-        }
-
-        public void AgregarProducto(Productos producto)
-        {
-            if (!Producto.Contains(producto))
-            {
-                Producto.Add(producto);
-            }
-        }
-
-        public void EliminarProducto(Productos producto)
-        {
-            if (Producto.Contains(producto))
-            {
-                Producto.Remove(producto);
-            }
-        }
     }
 }
 
